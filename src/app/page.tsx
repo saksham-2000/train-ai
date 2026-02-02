@@ -8,6 +8,14 @@ import Image from "next/image";
 import { useState } from "react";
 import { authClient } from "@/lib/auth-client";
 
+/**
+ * Client-side Home page component that provides sign-up, sign-in, and sign-out UI using authClient.
+ *
+ * When a session exists, displays the signed-in user and a Sign Out button; otherwise renders separate
+ * sign-up and sign-in forms that collect name, email, and password and invoke authClient callbacks.
+ *
+ * @returns The JSX element for the home page containing authentication forms or the signed-in view.
+ */
 export default function Home() {
 
   const { 
